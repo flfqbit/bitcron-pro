@@ -72,13 +72,8 @@ function change(){
 <%=post.stats.text %>
 </span>
 <span style="margin-right:15px">
-<i class="fa fa-share"></i>
-<a title="QR code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=<%= post.link %>"><i class="fa fa-qrcode"></i></a>
-<a title="qq share" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=<%= post.link %>&sharesource=qzone&title=<%= post.title %>&pics=https://blog.blinkstar.cn/images/avatar.png&summary=<%= post.abstract %>"><i class="fa fa-qq"></i></a>
-<a title="weibo share" target="_blank" href="https://service.weibo.com/share/share.php?url=<%= post.link %>&sharesource=weibo&title=<%= post.title%> + " - " + <%= post.abstract %>&pic="https://blog.blinkstar.cn/images/avatar.png"><i class="fa fa-weibo"></i></a>
 </span>
 <span style="margin-right:15px">
-<a id="daxiao" href="javascript:void(0);" onclick="change();" title="调整字体大小"><i class="fa fa-font"></i></a>
 </span>
 <span style="margin-right:15px">
 <a id="lan" href="javascript:void(0);" onclick="lan();" title="调整简繁体">繁</a>
@@ -90,7 +85,7 @@ function change(){
 	<% if (themeConfig.showFeatureImage && post.feature) { %>
 	<div style="background-image: url('<%= post.feature %>');background-repeat: no-repeat;background-size:100% auto;margin-top:32px;padding-bottom: 50%;"></div>
 	<% } else { %>
-	<img id="mememe" alt="featureimg" src="//source.unsplash.com/800x400/?arts,weather">
+
 	<% } %>
     <div name="show" id="show">
 	<p class="md_block"><span class="md_line md_line_start md_line_end"><%- post.content %></span></p></div><div id = "warn"></div>
@@ -99,8 +94,6 @@ function change(){
 <div style="color: #ccc;font-size:14px;"><i class="fa fa-user"></i>本文由<a rel="license" href="/"><%= themeConfig.siteName %></a>创作</div>	
 <div style="color: #ccc;font-size:14px;"><i class="fa fa-cc"></i>该文章采用<a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可。转载请注明出处！</div>
 <div style="color: #ccc;font-size:14px;"><i class="fa fa-clock-o"></i>发布时间为：<%= post.dateFormat %></div>    
-<div class="reward"><div class="reward-button">赏 <span class="reward-code"> <span class="alipay-code"> <img class="alipay-img" alt = "support" src="<%= themeConfig.domain %>/media/images/alipay.png"><b>支付宝扫码打赏</b> </span> <span class="wechat-code"> <img alt ="support" class="wechat-img" src="<%= themeConfig.domain %>/media/images/wechat.png"><b>微信打赏</b> </span> </span></div></div>
-<div style="text-align:center;color: #ccc;font-size:14px;">如果觉得这篇文章对您有帮助，可以请作者喝一杯饮料哦🥤</div>    
 </div>
 </div>
 
